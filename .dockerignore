@@ -1,0 +1,24 @@
+# 构建上下文只带源码与文档，绝不带凭证
+.env
+.env.*
+!.env.example
+ykt-token.json
+**/token*.json
+*.token.json
+
+# 编译产物
+*.exe
+bin/
+dist/
+
+# 版本管理无关
+.git
+.gitignore
+README.md
+docs/
+*.log
+logs/
+.vscode/
+.idea/
+Dockerfile
+.dockerignore

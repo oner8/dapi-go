@@ -1,0 +1,14 @@
+.env
+.env.*
+!.env.example
+*ykt-token*.json
+**/token*.json
+*.token.json
+*.log
+logs/
+/dapi-go
+*.exe
+bin/
+dist/
+.vscode/
+.idea/
