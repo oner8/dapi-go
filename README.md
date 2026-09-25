@@ -30,7 +30,7 @@ CLI 还提供 `login ykt`（强制登录）和 `decode ykt`（只显示 token �
 curl -H "Authorization: Bearer $YKT_API_KEY" http://127.0.0.1:8080/ykt/health
 ```
 
-启用 `API_PROXY_KEY` 时，再加 `-H "X-Api-Key: $API_PROXY_KEY"`。不要把密钥放入 URL、日志或公开的命令示例。公网访问请使用 HTTPS 反向代理。1Panel 示例见 [部署说明](docs/05-1panel-deployment.md)。
+启用 `API_PROXY_KEY` 时，再加 `-H "X-Api-Key: $API_PROXY_KEY"`。不要把密钥放入 URL、日志或公开的命令示例。公网访问请使用 HTTPS 反向代理。公开 GHCR 镜像、纯环境变量 Compose 和 1Panel 的用法见 [部署说明](docs/05-1panel-deployment.md)。
 
 调用 `/ykt/api/basic/findDataAreaBoard` 时，网关使用 `/transactionDetail` 作为上游 `Referer`，并补齐与浏览器一致的请求元数据。调用方只需提供网关鉴权头；上游 `Token` 仍由网关注入。`Connection` 等连接级请求头由 Go HTTP 客户端管理。浏览器请求头不能保证复现浏览器的 TLS 特征或绕过上游的风控。
 
